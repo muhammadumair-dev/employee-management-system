@@ -15,7 +15,7 @@ function Login({handleLogin}) {
         setpassword('')
     }
   return (
-    <div className='flex flex-col bg-black overflow-x-hidden h-screen w-screen items-center justify-center'>
+    <div className='flex flex-col flex-wrap bg-black overflow-hidden h-screen w-screen items-center justify-center'>
       <div className=' px-6 text-3xl sm:hidden'>Login</div>
       
       <div className='sm:border-2  sm:border-emerald-600  p-20'>
