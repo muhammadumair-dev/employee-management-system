@@ -8,7 +8,7 @@ const employe = [
       active: 5,
       newtask: 1,
       completed: 1,
-      failed: 0
+      failed: 1
     },
     tasks: [
       {

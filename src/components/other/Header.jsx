@@ -16,9 +16,9 @@ const logout = ()=>{
 props.change('')
 }
   return (
-    <div className='flex items-end justify-between text-white'>
-        <h1 className='text-2xl font-medium'>Hello <br /><span className='font-semibold text-3xl'>{props.data ? props.data.firstName : 'Admin'}👋</span> </h1>
-        <button onClick={logout} className='bg-red-600 px-5 py-2 text-lg  font-medium rounded-sm' >Log Out</button>
+    <div className='flex sm:items-end items-center justify-between text-white'>
+        <h1 className='sm:text-2xl text-[21px] leading-7  font-medium'>Hello <br /><span className='font-semibold sm:text-3xl text-[28px]'>{props.data ? props.data.firstName : 'Admin'}👋</span> </h1>
+        <button onClick={logout} className='bg-red-600 sm:px-5 px-2  py-2 sm:text-lg   font-medium rounded-sm' >Log Out</button>
           {/* <>
     {!user ? <Login handleLogin={handleLogin} /> : ''}
     {user == 'admin' ? <AdminDashboard /> : (user == 'employee' ? <EmployeDashboard data={IogediUuserData} />: null)}

@@ -11,7 +11,7 @@ function AdminDashboard(props) {
  
     
     return (
-        <div className='h-screen w-full p-7'><Header  change={props.change}/>
+        <div className='h-screen w-full  sm:p-7 p-3 '><Header  change={props.change}/>
            
 <Createtask/>
 <AllTask/>

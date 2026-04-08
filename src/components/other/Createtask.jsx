@@ -57,8 +57,8 @@ function Createtask() {
         <div className='p-5 bg-[#1c1c1c] mt-7 rounded'>
             <form onSubmit={(e) => {
                 SubmitHandler(e)
-            }} className='flex flex-wrap items-start justify-between w-full' >
-                <div className='w-1/2' >
+            }} className='flex flex-col sm:flex-row flex-wrap items-start justify-between w-full' >
+                <div className='sm:w-1/2 w-full' >
                     <div className='text-sm text-gray-300 mb-0.5' >  <h3>
                         Task Title
                     </h3>
@@ -66,34 +66,34 @@ function Createtask() {
                             onChange={(e) => {
                                 settitle(e.target.value)
                             }}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4' type="text" placeholder='Make a UI Desgin' /></div>
+                            className='text-sm py-1 px-2 sm:w-4/5 w-full rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4' type="text" placeholder='Make a UI Desgin' /></div>
 
                     <div>            <h3 className='text-sm text-gray-300 mb-0.5' >Date</h3>
                         <input value={Date}
                             onChange={(e) => {
                                 setDate(e.target.value)
                             }}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4' type="date" /></div>
+                            className='text-sm py-1 px-2 sm:w-4/5 w-full rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4' type="date" /></div>
                     <div> <h3 className='text-sm text-gray-300 mb-0.5' >Asing to</h3>
                         <input value={Asign}
                             onChange={(e) => {
                                 setAsign(e.target.value)
                             }}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4' type="text" placeholder='employee name ' /></div>
+                            className='text-sm py-1 px-2 sm:w-4/5 w-full rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4' type="text" placeholder='employee name ' /></div>
                     <div>  <h3 className='text-sm text-gray-300 mb-0.5' >Category</h3>
                         <input value={Category}
                             onChange={(e) => {
                                 setCategory(e.target.value)
                             }}
-                            className='text-sm py-1 px-2 w-4/5 rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4 ' type="text" placeholder='design , dev , etc' /></div>
+                            className='text-sm py-1 px-2 sm:w-4/5 w-full rounded outline-none bg-transparent border-[1px]  border-gray-400 mb-4 ' type="text" placeholder='design , dev , etc' /></div>
                 </div>
                 {/*  */}
-                <div className='w-1/2 flex flex-col items-start'><h3 className='text-sm text-gray-300 mb-0.5' >Descripton</h3>
+                <div className='sm:w-1/2  w-full flex flex-col items-start'><h3 className='text-sm text-gray-300 mb-0.5' >Descripton</h3>
                     <textarea value={Description}
                         onChange={(e) => {
                             setDescription(e.target.value)
                         }}
-                        className='text-sm py-2 h-44 px-4 w-4/5 rounded outline-none bg-transparent border-[1px] w-full border-gray-400' name="" id="" cols="30" rows="10" ></textarea>
+                        className='text-sm py-2 h-25 sm:h-44 px-4 w-3/5 rounded outline-none bg-transparent border-[1px] w-full border-gray-400' name="" id="" cols="30" rows="10" ></textarea>
                     <button className='bg-emerald-500 py-3 hover:bg-emerald-600 px-5 rounded text-sm mt-4 w-full'>Create Task</button></div>
             </form>
         </div>

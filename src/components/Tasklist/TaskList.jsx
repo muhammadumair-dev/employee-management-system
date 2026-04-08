@@ -8,7 +8,7 @@ function TaskList({ data }) {
   if (!data || !Array.isArray(data.tasks)) return null
 
   return (
-    <div id='tasklist' className='h-[55%] overflow-x-auto flex justify-start py-5 mt-10 gap-5 flex-nowrap' >
+    <div id='tasklist' className='sm:h-[55%] h-[45%] overflow-x-auto  flex flex-col sm:flex-row gap-2 justify-start sm:py-5 mt-5 sm:mt-10 sm:gap-5  sm:flex-nowrap' >
       {data.tasks.map((elem,idx) => {
 
         // console.log(elem);
