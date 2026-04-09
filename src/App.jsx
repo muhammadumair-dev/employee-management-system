@@ -3,6 +3,7 @@ import Login from './components/Auth/Login'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
 import EmployeDashboard from './components/Dashboard/EmployeDashboard'
 import { AuthContext } from './context/AuthProvider'
+import { getLocalStorage } from './utils/Localstorage'
 
 function App() {
 
@@ -35,7 +36,10 @@ setlogediUuserData(userData.data)
 }, [userData])
  
   const handleLogin = (name, email, password) => {
-    if (email === 'admin@example.com' && password === '123') {
+    const { admin } = getLocalStorage()
+    const adminUser = Array.isArray(admin) ? admin[0] : admin
+
+    if (adminUser && email === adminUser.email && password === adminUser.password) {
       setUser('admin')
       localStorage.setItem('loggeninuser', JSON.stringify({ role: 'admin' }))
       return
@@ -49,6 +53,10 @@ setlogediUuserData(userData.data)
     const employee = userData.find((e) => email === e.email && password === e.password)
 
     if (employee) {
+      if (employee.newUser) {
+        alert('Your account is pending admin approval. Please wait until an admin accepts your registration.')
+        return
+      }
       setUser('employee')
       setlogediUuserData(employee)
       localStorage.setItem('loggeninuser', JSON.stringify({ role: 'employee', data: employee }))
@@ -89,10 +97,7 @@ setlogediUuserData(userData.data)
 
     const updatedUsers = [...userData, newEmployee]
     setuserData(updatedUsers)
-    setUser('employee')
-    setlogediUuserData(newEmployee)
-    localStorage.setItem('loggeninuser', JSON.stringify({ role: 'employee', data: newEmployee }))
-    alert('New employee account created and logged in. Your default task is ready.')
+    alert('Registration submitted. Your account is now pending admin approval.')
   }
 
 return (
