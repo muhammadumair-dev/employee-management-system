@@ -1,8 +1,9 @@
 import React from 'react'
 
 function FailedTask({data}) {
+  const cardStyle = data.color ? { backgroundColor: data.color } : undefined
   return (
-    <div className='h-full w-[300px] bg-blue-400 rounded-xl p-5 flex-shrink-0'>
+    <div style={cardStyle} className='h-full w-[300px] bg-blue-400 rounded-xl p-5 flex-shrink-0'>
       <div className='flex justify-between items-center '>
         <h3 className='bg-red-600 text-sm px-3 py-1 rounded'>{data.category}</h3>
         <h2 className='text-sm'>{data.date}</h2>

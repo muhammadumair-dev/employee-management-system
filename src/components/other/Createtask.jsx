@@ -10,6 +10,18 @@ function Createtask() {
     const [Asign, setAsign] = useState('')
     const [Category, setCategory] = useState('')
 
+    const palette = [
+        '#f59e0b', // amber
+        '#8b5cf6', // violet
+        '#3b82f6', // blue
+        '#10b981', // emerald
+        '#ef4444', // red
+    ]
+
+    const getRandomColor = () => {
+        return palette[Math.floor(Math.random() * palette.length)]
+    }
+
     const SubmitHandler = (e) => {
         e.preventDefault()
         if (!userData) return
@@ -23,6 +35,7 @@ function Createtask() {
             newtask: true,
             failed: false,
             completed: false,
+            color: getRandomColor(),
         }
 
         const updatedUsers = userData.map((elem) => {

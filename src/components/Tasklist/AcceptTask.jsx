@@ -1,9 +1,10 @@
 import React from 'react'
 
 function AcceptTask({ data }) {
+  const cardStyle = data.color ? { backgroundColor: data.color } : undefined
 
   return (
-    <div className='sm:h-full  h-[130px] w-[100%] sm:w-[300px] bg-amber-400 rounded-xl p-2 sm:p-5 flex-shrink-0'>
+    <div style={cardStyle} className='sm:h-full  h-[130px] w-[100%] sm:w-[300px] bg-amber-400 rounded-xl p-2 sm:p-5 flex-shrink-0'>
       <div className='flex justify-between items-center '>
         <h3 className='bg-red-600 text-[10px] sm:text-sm px-3 py-1 rounded'>{data.category}</h3>
         <h2 className='text-sm'>{data.date}</h2>
