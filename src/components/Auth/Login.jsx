@@ -26,13 +26,13 @@ Submit(e)
     <input value={name}
     onChange={(e)=>{
         setName(e.target.value)
-    }} type="text" className='outline-none text-white bg-transparent border-2 border-emerald-600 text-[15px] sm:text-xl  py-2.5 px-5 w-[180%]   sm:w-full rounded-full placeholder:text-gray-400 mb-3' placeholder='Enter Name ' />
+    }} type="text" className='outline-none text-white bg-transparent border-2 border-emerald-600 text-[15px] sm:text-xl  py-2.5 px-5 w-[155%]   sm:w-full rounded-full placeholder:text-gray-400 mb-3' placeholder='Enter Name ' />
     <input value={email}
     onChange={(e)=>{
         setemail(e.target.value)
-    }} required type="email" className='outline-none text-white bg-transparent border-2 border-emerald-600 text-[15px] sm:text-xl  py-2.5 px-5 w-[180%]   sm:w-full rounded-full placeholder:text-gray-400 mb-3' placeholder='Enter Email ' />
-    <input required type="password" value={password} onChange={(e)=>{setpassword(e.target.value)}} className='outline-none text-white bg-transparent sm:w-full border-2 border-emerald-600 text-[15px] sm:text-xl  py-2.5 px-5 w-[180%]  rounded-full placeholder:text-gray-400 mb-3' placeholder='Enter Password' />
-<button className='text-white outline-none  bg-emerald-600 text-[15px] sm:text-xl py-3 px-5 rounded-full w-[180%] mt-2 sm:mt-7 sm:w-full '> login</button>
+    }} required type="email" className='outline-none text-white bg-transparent border-2 border-emerald-600 text-[15px] sm:text-xl  py-2.5 px-5 w-[155%]   sm:w-full rounded-full placeholder:text-gray-400 mb-3' placeholder='Enter Email ' />
+    <input required type="password" value={password} onChange={(e)=>{setpassword(e.target.value)}} className='outline-none text-white bg-transparent sm:w-full w-[155%] border-2 border-emerald-600 text-[15px] sm:text-xl  py-2.5 px-5   rounded-full placeholder:text-gray-400 mb-3' placeholder='Enter Password' />
+<button className='text-white outline-none  bg-emerald-600 text-[15px] sm:text-xl py-3 px-5 rounded-full w-[155%] mt-2 sm:mt-7 sm:w-full '> login</button>
 </form>
       </div>
     </div>
