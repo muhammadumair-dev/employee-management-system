@@ -61,18 +61,29 @@ setlogediUuserData(userData.data)
     }
 
     const nextId = userData.reduce((maxId, user) => Math.max(maxId, user.id), 0) + 1
+    const defaultTask = {
+      title: "Welcome to your first task",
+      description: "Start here by opening this new task and completing it.",
+      date: new Date().toISOString().slice(0, 10),
+      category: "Onboarding",
+      active: true,
+      newtask: true,
+      completed: false,
+      failed: false,
+    }
+
     const newEmployee = {
       id: nextId,
       firstName: name.trim(),
       email,
       password,
       taskCount: {
-        active: 0,
-        newtask: 0,
+        active: 1,
+        newtask: 1,
         completed: 0,
         failed: 0,
       },
-      tasks: [],
+      tasks: [defaultTask],
       newUser: true,
     }
 
@@ -81,7 +92,7 @@ setlogediUuserData(userData.data)
     setUser('employee')
     setlogediUuserData(newEmployee)
     localStorage.setItem('loggeninuser', JSON.stringify({ role: 'employee', data: newEmployee }))
-    alert('New employee account created and logged in. Admin will be able to see the new user.')
+    alert('New employee account created and logged in. Your default task is ready.')
   }
 
 return (
